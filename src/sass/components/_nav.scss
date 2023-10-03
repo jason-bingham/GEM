@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  background-color: #233848;
+  padding: clamp(0.31rem, 0.31rem + 0vw, 0.31rem);
+  font-family: "Arsenal", sans-serif;
+  filter: drop-shadow(0 0 2px #fafafa);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navitem {
+  font-size: clamp(1rem, 0.91rem + 0.43vw, 1.25rem);
+  color: #fafafa;
+}
+
+.navlist {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}

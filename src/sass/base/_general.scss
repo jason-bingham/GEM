@@ -1,0 +1,28 @@
+@use "../abstracts/" as *;
+
+body {
+  font-family: $ff-serif;
+  color: clr(neutral, dark);
+  font-size: fs(400);
+  line-height: 1.6;
+  background-color: clr(neutral, light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff-headings;
+  line-height: 1.1;
+  text-wrap: balance;
+  color: clr(primary, normal);
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+a:hover,
+a:focus {
+  color: clr(accent, normal);
+}

@@ -1,0 +1,97 @@
+.hero {
+  width: 100vw;
+  height: 70vh;
+  background-color: #233848;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+@media only screen and (min-width: 40em) {
+  .hero {
+    flex-direction: row;
+  }
+}
+
+.gem__container {
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+  margin-block: auto;
+  gap: 0.5rem;
+}
+
+.svg__box {
+  width: 100px;
+  align-self: end;
+}
+
+.gem__logo {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.75;
+  animation: gemin 2s ease 9s forwards;
+  stroke-dasharray: 0 1000;
+  opacity: 0;
+  width: 100px;
+}
+
+@keyframes gemin {
+  0% {
+    stroke-dasharray: 1 200;
+    opacity: 0;
+  }
+  100% {
+    stroke-dasharray: 200;
+    opacity: 1;
+  }
+}
+.gem__topline {
+  color: #da5225;
+  font-size: 2rem;
+}
+
+.gem__disappearing {
+  opacity: 1;
+  animation: appear 1.5s ease-out 3s reverse forwards;
+}
+
+.gem__matter {
+  opacity: 0;
+  animation: appear 1.5s ease-in 4.5s forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.shrinking {
+  animation: shrink 2s ease 7s forwards;
+}
+
+.growing {
+  animation: grow 2s ease 7s forwards;
+}
+
+@keyframes shrink {
+  0% {
+    font-size: 2rem;
+    opacity: 1;
+  }
+  100% {
+    font-size: 0;
+    opacity: 0;
+  }
+}
+@keyframes grow {
+  0% {
+    font-size: 2rem;
+  }
+  100% {
+    font-size: 4.5rem;
+  }
+}
